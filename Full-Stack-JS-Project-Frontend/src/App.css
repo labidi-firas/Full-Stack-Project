@@ -1,0 +1,762 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.account-disabled-page {
+  background-size: cover;
+  height: 100vh;
+}
+
+.account-disabled-card {
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+.psychiatrist-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 900px; /* Hauteur fixe */
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.psychiatrist-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.psychiatrist-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  max-height: 120px; /* Limite la hauteur des disponibilités */
+  overflow: hidden;
+}
+
+.psychiatrist-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+.book-appointment-btn:hover {
+  background-color: #0056b3;
+}
+
+.psychiatrist-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.no-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.psychiatrist-info h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.psychiatrist-info p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.psychiatrist-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.psychiatrist-info ul li {
+  padding: 5px;
+  transition: background-color 0.2s;
+}
+
+.psychiatrist-info ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.book-appointment-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.book-appointment-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px; /* Remonte les boutons */
+
+}
+
+.pagination-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+/* AppointmentHistory.css */
+.appointment-history-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.appointment-history-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #d9534f;
+  background-color: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.no-appointments {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appointment-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+  position: relative; /* Added to fix icon positioning */
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+}
+
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appointment-details p {
+  margin: 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.label {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.status.pending {
+  background-color: #ffc107;
+}
+
+.status.confirmed {
+  background-color: #28a745;
+}
+
+.status.completed {
+  background-color: #17a2b8;
+}
+
+.status.canceled {
+  background-color: #dc3545;
+}
+
+.edit-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-status select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.edit-btn, .save-btn, .cancel-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+/* AppointmentHistory.css (ajout de la classe delete-btn) */
+.delete-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #dc3545;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn i {
+  font-size: 1rem;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+  color: #c82333;
+}
+
+.delete-icon i {
+  font-size: 1.2rem;
+}
+
+
+
+
+.appointment-history-container {
+  padding: 20px;
+}
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.appointment-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.appointment-details p {
+  margin: 5px 0;
+}
+.label {
+  font-weight: bold;
+}
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status {
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.status.pending { background-color: #ffeb3b; }
+.status.confirmed { background-color: #4caf50; color: white; }
+.status.completed { background-color: #2196f3; color: white; }
+.status.canceled { background-color: #f44336; color: white; }
+.edit-status {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.loading, .error, .no-appointments {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+.error {
+  color: #f44336;
+}
+/* Stream Chat overrides */
+.chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message-container {
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  align-self: flex-start;
+  background-color: #f5f5f5;
+}
+
+.message.self {
+  align-self: flex-end;
+  background-color: #e3f2fd;
+}
+
+.timestamp {
+  display: block;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.send-button,
+.refresh-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.send-button:hover,
+.refresh-button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+}
+
+
+
+
+/* Existing styles remain unchanged, adding search-specific styles */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+
+.view-availability-btn {
+  background-color: #6CB4EE;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  position: relative;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.view-availability-btn:hover {
+  opacity: 1;
+  background-color: #5AA0D8;
+}
+
+.view-availability-btn i {
+  font-size: 14px;
+}
+
+.notification-bell {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.notification-bell button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+
+
+.notification-header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-header h5 {
+  margin: 0;
+}
+
+.notification-header button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+}
+
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.notification-item.unread {
+  background: #e6f3ff;
+  font-weight: bold;
+}
+
+.notification-item.read {
+  background: #f9f9f9;
+}
+
+.notification-item p {
+  margin: 0;
+}
+
+.notification-item small {
+  color: #666;
+}
+.notification-bell {
+  position: relative;
+  margin-left: 15px;
+}
+.notification-dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.bell-shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.stats-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.stats-button:hover {
+  transform: scale(1.05);
+}
+.fc-event.booked {
+  background-color: #d3d3d3 !important;
+  border-color: #d3d3d3 !important;
+  color: #000000 !important;
+  cursor: not-allowed;
+}
+
+.fc-event.available {
+  background-color: #7da3ea !important;
+  border-color: #7da3ea !important;
+  color: #000000 !important;
+}
+.fc-event-main {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+.fc-timegrid-event {
+  padding: 2px 4px;
+}
+
+/* Events Section */
+.team-single-events {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 3rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.event-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .event-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .team-single-events {
+    padding: 1rem;
+  }
+}
+
+/* Badges */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+}
+
+/* Buttons */
+.theme-btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}

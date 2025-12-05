@@ -1,0 +1,14 @@
+﻿node_modules/
+uploads/
+*.log
+.DS_Store
+.env
+package-lock.json
+
+# Large asset files
+**/assets/fonts/
+**/assets/sounds/
+*.mp3
+*.ttf
+*.woff
+*.woff2
