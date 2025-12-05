@@ -96,10 +96,4 @@ Our platform features a modern, clean, and user-friendly interface designed with
 <img src="https://github.com/user-attachments/assets/25e9e677-3450-4188-8554-19194b4ffa1f" />
 
 
-## 🙏 Dedication
-We would like to express our sincere gratitude to **ESPRIT University** for giving us the opportunity to work on this meaningful and innovative project.  
-A special thanks to our mentors:  
-👩‍🏫 **Ms. Linda Ouerfelli**  
-👩‍🏫 **Ms. Mariem Mriri**  
-👩‍🏫 **Ms. Oumeima Ibnlefkih**  
-for their guidance, trust, and valuable support throughout this journey.
+
