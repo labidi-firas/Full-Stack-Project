@@ -6,8 +6,7 @@
 The goal of this project is to provide a structured, secure and efficient platform for Esprit university to manage psychological support for students facing difficulties.
 
 
-##  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25"> The Starks Team
-![Capture d'écran 2025-05-11 205942](https://github.com/user-attachments/assets/b1109f11-728e-4d2b-a96d-6a40252696b9)
+
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="25"> Frameworks and technologies  
 <p align="left">
